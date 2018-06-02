@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<h1>Input your information</h1>
+<form id="userinput">
+	First Name:	<input name = "fname" type="text" id="fname"><br><br>
+	Last Name:	<input name = "lname" type="text" id="lname"><br><br>
+	Email:	<input name = "email" type="text" id="email"><br><br>
+	Tech Savvy:	<select name="techSavvy" id="techSavvy">
+		<option value="tech1">Technical Expert</option>
+		<option value="tech2">Above Average</option>
+		<option value="tech3">Some Technical Savvy</option>
+		<option value="tech4">What's Technical Mean?</option>
+	</select><br><br><br>
+	Username:	<input name = "username" type="text" id="username"><br><br>
+	Password:	<input name = "password" type="text" id="password"><br><br>
+	Confirm Password:	<input name = "confirm" type="text" id="confirm"><br><br>
+	<br><br>
+	<input type="submit" onclick="validate()">
+<script>
+function validate(){
+var password = document.forms["userinput"]["password"].value;
+var passConfirm = document.forms["userinput"]["confirm"].value;
+var unentered = null;
+for (i = 0; i < 6; i++){
+	if (!document.forms["userinput"][i].value)
+		if (!unentered)
+			unentered = document.forms["userinput"][i].name;
+		else
+			unentered += (", " + document.forms["userinput"][i].name);
+}
+if (unentered)
+{
+	alert("Please fill out " + unentered);
+	return;
+}
+if (!passConfirm || password != passConfirm)
+{
+	alert("Passwords don't match");
+	return;
+}
+window.open("verified.html");
+}
+</script
+</body>
+</html>
