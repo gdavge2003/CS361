@@ -1,0 +1,29 @@
+<div class="imagebg"></div>
+<div class="row " style="margin-top: 50px">
+  <div class="col-md-6 col-md-offset-3 form-container">
+    <h2>Rate and Review</h2>
+    <p>
+      Rate this service on a scale of 1 - 5 stars and leave your review below:
+    </p>
+    <div id="status"></div>
+    <form id="ratingForm">
+      <fieldset class="rating">
+        <legend>Please rate:</legend>
+        <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Excellent">5 stars</label>
+        <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Good">4 stars</label>
+        <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Average">3 stars</label>
+        <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Below Average">2 stars</label>
+        <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Poor">1 star</label>
+      </fieldset>
+      <div class="row">
+      <div class="col-sm-12 form-group">
+         <label for="review">
+          Your Review:</label>
+           <textarea class="form-control" type="textarea" name="review" id="review" placeholder="Enter Review" maxlength="6000" rows="7"></textarea>
+      </div>
+    </div>
+      <div class="clearfix"></div>
+      <button class="submit clearfix">Submit</button>
+    </form> 
+  </div>          
+</div>
